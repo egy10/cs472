@@ -11,14 +11,15 @@
 
 <body>
     <h1>Retrieve Grade</h1>
+    <hr>
     <form>
-        <p>Name:</p>
+        <p> <b>Name:</b></p>
         <input type="Text" name="StudentName" />
-        <p>Student ID:</p>
+        <p> <b>Student ID:</b></p>
         <input type="text" name="StudentID" />
         <div>
             <p>
-                <label for="assignments">Assignments:<label>
+                <label for="assignments"> <b>Assignments:</b><label>
             </p>
             <select id="assignments" name="assignments">
                 <option value="home"> My First Home Page </option>
@@ -28,7 +29,7 @@
             </select>
         </div>
         <div>
-            <p> Entry: <label id="may"> <input type="radio" name="entry" value="checked" required /> May
+            <p> <b>Entry: </b><label id="may"> <input type="radio" name="entry" value="checked" required /> May
                 </label> <label id="august"> <input type="radio" name="entry" value="checked" required /> August
                 </label> <label id="november"> <input type="radio" name="entry" value="checked" required/>November</label>
                 <label id="february"> <input type="radio" name="entry" value="checked" required/> February</label>
@@ -40,6 +41,17 @@
         </p>
         <input type="submit" value="Get grade" name="get" />
     </form>
+    <div class="w3c">
+        <p>
+            <a href="https://validator.w3.org/check?uri=https://egy10.github.io/cs472/Grade/grade.html"> <img
+                    src="http://mumstudents.org/cs472/2013-09/images/w3c-html.png" alt="Valid HTML" />
+            </a>
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://egy10.github.io/cs472/Grade/grade.html">
+                <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!" />
+            </a>
+        </p>
+    </div>
 </body>
 
 </html>

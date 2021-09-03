@@ -1,4 +1,9 @@
-.h1{
-    color: blue;
-
-}
+h1 {
+    background-color: rgb(64, 163, 89);
+    margin: auto;
+  }
+  body {
+    background: url('./miu-logo-horizontal-1024x317.png') right bottom no-repeat;
+  padding-left: 4%;
+  }
+  
