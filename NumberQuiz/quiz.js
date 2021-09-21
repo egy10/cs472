@@ -1,28 +1,23 @@
-var http = require('http');
-var url = require('url');
-var fs = require('fs');
+const express = require("express");
+const path = require("path");
 
-http.createServer(function (req, res) {
-    var q = url.parse(req.url, true);
-    var filename = "." + q.pathname;
-    if (q.pathname == "/quiz") {
-        if (q.query.operation == "add")
-            addmod.do(req, res, q.query)
-        else if (q.query.operation == "multiply")
-            mulmod.do(req, res, q.query)
-        else if (q.query.operation == "subtract")
-            submod.do(req, res, q.query)
-        else if (q.query.operation == "divide")
-            divmod.do(req, res, q.query)
-    }
-    else
-        fs.readFile(filename, function (err, data) {
-            if (err) {
-                res.writeHead(404, { 'Content-Type': 'text/html' });
-                return res.end("404 Not Found");
-            }
-            res.writeHead(200, { 'Content-Type': 'text/html' }); // Content-Type not included
-            res.write(data);
-            return res.end();
-        });
-}).listen(8080);
+const app = express()
+
+app.get("/", (req, res) => {
+    res.status(200).json({
+        data: "Hello world"
+    })
+});
+
+app.get("/question", (req, res) => {
+    res.sendFile(path.join(__dirname + "/question1.html"));
+});
+
+app.get("/question2", (req, res) => {
+    res.sendFile(path.join(__dirname + "/question2.html"));
+});
+
+
+app.listen(3000, () => {
+    console.log('server listening on port 3000')
+})
