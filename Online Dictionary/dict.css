@@ -1,0 +1,10 @@
+body {
+    margin: 5px;
+  }
+  h2 {
+    background-color: rgb(126, 122, 122);
+  }
+  .form {
+    background-color: rgb(151, 183, 231);
+    padding: 18px;
+  }
